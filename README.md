@@ -1,4 +1,4 @@
-# DeepSeek-R1-Distill-Qwen-14B on Kubernetes (Production-Ready)
+# DeepSeek-R1 Models on Kubernetes (Production-Ready)
 
 This repo deploys **DeepSeek-R1** models from HuggingFace on a **DigitalOcean Kubernetes cluster** with an **NVIDIA H100 (80GB VRAM)**, fully optimized for **production AI inference**.
 
@@ -35,6 +35,5 @@ Consider using our [Production Ready Kubernetes Cluster Blueprint](https://githu
    kubectl get pods -n vllm
 ```
 ---
-
 
 If you applied the Ingress, you can curl your domain (e.g. deepseek.example.com) at https://deepseek.example.com/v1/completions.
