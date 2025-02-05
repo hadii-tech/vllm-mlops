@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deepseek
+  namespace: vllm
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    kubernetes.io/ingressClassName: "nginx"
+spec:
+  rules:
+    # replace with your hostname (optional)
+    - host: deepseek.hadii.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: deepseek
+                port:
+                  number: 80
+  tls:
+    - hosts:
+      - deepseek.hadii.com
+      secretName: deepseek-tls

@@ -1,0 +1,14 @@
+# Terraform / Kubernetes state, logs, etc.
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes config
+.kube/
+
+# Helm local files
+charts/
+
+# Mac & general OS files
+.DS_Store

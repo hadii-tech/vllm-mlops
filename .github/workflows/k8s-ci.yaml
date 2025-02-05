@@ -1,0 +1,29 @@
+name: "Kubernetes CI Check"
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-kubernetes:
+    name: "Validate Kubernetes Manifests"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: "latest"
+
+    - name: Validate Kubernetes YAML Files
+      run: |
+        kubectl kustomize k8s/ | kubectl apply --dry-run=client -f -
+
+    - name: Lint YAML Files
+      uses: ibiqlik/action-yamllint@v3
+      with:
+        file_or_dir: "k8s/"
