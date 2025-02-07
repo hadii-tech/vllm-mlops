@@ -1,4 +1,11 @@
-# Production Ready DeepSeek-R1 Models on Kubernetes
+# Production Ready LLM Inferencing on Kubernetes
+<img src="https://github.com/user-attachments/assets/ed989361-7e99-4d94-a240-193c47aaa3e3" style="padding-bottom:50px;" width="500">
+<br/><br/>
+
+
+
+
+
 This repo deploys [OpenAPI compatible](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) API server based on the **DeepSeek-R1** model for production capable inferencing workloads on a **DigitalOcean Kubernetes cluster** deployed with NVIDIA H100 GPUs.
 
 **DeepSeek-R1** is a cutting-edge LLM trained using large-scale reinforcement learning to enhance reasoning capabilities. It consists of two main versions:
