@@ -6,7 +6,7 @@
 
 
 
-This repo deploys [OpenAPI compatible](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) API server based on the **DeepSeek-R1** model for production capable inferencing workloads on a **DigitalOcean Kubernetes cluster** deployed with NVIDIA H100 GPUs.
+This repo deploys [OpenAPI compatible](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) API server based on the **DeepSeek-R1** model for production capable inferencing workloads on Kubernetes (tests were completed on a **DigitalOcean Kubernetes cluster** deployed with NVIDIA H100 GPUs).
 
 **DeepSeek-R1** is a cutting-edge LLM trained using large-scale reinforcement learning to enhance reasoning capabilities. It consists of two main versions:
 
